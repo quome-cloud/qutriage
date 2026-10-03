@@ -1,0 +1,26 @@
+% Headline numbers for paper 009, traceable to results/009-hitl-calibration/*.json.
+% Regenerate with:
+%   python3 scripts/009-hitl-calibration/gen_triage.py
+%   python3 scripts/009-hitl-calibration/fit_calibration.py
+%   python3 scripts/009-hitl-calibration/run_experiments.py
+%
+% Convention: main.tex \providecommand's safe defaults so it compiles without this
+% file; OVERRIDE the pre-provided ones with \renewcommand, introduce NEW ones with
+% \newcommand.
+\renewcommand{\NumPrompts}{600}        % TriageBench size
+\renewcommand{\PolicyFalseBlock}{28.3\%} % E1 policy false-block of legit actions
+\renewcommand{\VolFixed}{0.405}          % E3 fixed escalation volume
+\renewcommand{\VolCal}{0.242}            % E3 calibrated escalation volume
+\renewcommand{\VolReduction}{40\%}       % E3 reduction vs fixed
+\renewcommand{\FaFixed}{0.087}           % E3 fixed false-allow
+\renewcommand{\FaCal}{0.020}             % E3 / E6 calibrated false-allow
+\renewcommand{\FbCal}{0.005}             % E6 false-block
+\renewcommand{\OeCal}{0.242}             % E6 over-escalation
+\renewcommand{\TtcCal}{533}              % E6 total time-to-care delay (min)
+\renewcommand{\EceRaw}{0.229}            % hand-set-default ECE (ablation)
+\renewcommand{\EceFit}{0.056}            % fitted ECE (after temperature scaling)
+\renewcommand{\BestTemp}{0.75}           % fitted temperature
+\renewcommand{\Kappa}{0.81}              % Fleiss' kappa
+\renewcommand{\ShiftLo}{0.02}            % E5 optimal shift at low load
+\renewcommand{\ShiftHi}{0.26}            % E5 optimal shift at load 50
+\renewcommand{\HtwoOld}{16\%}            % H2 under hand-set defaults (ablation)
